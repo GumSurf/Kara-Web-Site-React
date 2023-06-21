@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 function NotFound() {
     return (
-        <div>
-            <h1>404</h1>
-            <h2>Oups! La page que vous demandez n'existe pas.</h2>
-            <Link to="/">Accueil</Link>
+        <div className='kasa-not-found'>
+            <h1 className='title-404'>404</h1>
+            <h2 className='text-not-found'>Oups! La page que vous demandez n'existe pas.</h2>
+            <Link className='link-not-found' to="/">Retourner sur la page d’accueil</Link>
         </div>
     )
 }
