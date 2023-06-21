@@ -1,0 +1,46 @@
+.kasa-body {
+  margin: 20px 100px 20px 100px; }
+  .kasa-body .background-sea {
+    position: relative;
+    background-image: url("../assets/ImgBackgroundSea.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px; }
+    .kasa-body .background-sea .overlay-sea {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1; }
+    .kasa-body .background-sea .title-sea {
+      position: relative;
+      color: white;
+      text-align: center;
+      font-weight: normal;
+      padding-top: 78px;
+      padding-bottom: 78px;
+      z-index: 2; }
+
+.kasa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 100px 50px 100px; }
+  .kasa-header .header-links {
+    display: flex;
+    list-style-type: none; }
+    .kasa-header .header-links .header-link-accueil {
+      margin-right: 57px;
+      text-decoration: none;
+      color: #FF6060; }
+    .kasa-header .header-links .header-link-accueil:hover {
+      text-decoration: underline; }
+    .kasa-header .header-links .header-link-a-propos {
+      text-decoration: none;
+      color: #FF6060; }
+    .kasa-header .header-links .header-link-a-propos:hover {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=style.css.map */
