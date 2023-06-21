@@ -1,0 +1,34 @@
+.kasa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px 100px 50px 100px;
+    
+    .header-logo {
+
+    }
+
+    .header-links {
+        display: flex;
+        list-style-type: none;
+        
+        .header-link-accueil {
+            margin-right: 57px;
+            text-decoration: none;
+            color: $kasa-orange;
+        }
+
+        .header-link-accueil:hover {
+            text-decoration: underline;
+        }
+
+        .header-link-a-propos {
+            text-decoration: none;
+            color: $kasa-orange;
+        }
+
+        .header-link-a-propos:hover {
+            text-decoration: underline;
+        }
+    }
+}
