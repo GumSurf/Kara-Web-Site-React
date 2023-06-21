@@ -32,8 +32,6 @@ function ApartmentDetails() {
           <li key={index}>{tag}</li>
         ))}
       </ul>
-
-      <Outlet /> {/* Affiche les routes imbriquées */}
     </div>
   );
 }
