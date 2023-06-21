@@ -1,0 +1,29 @@
+.kasa-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $kasa-orange;
+
+    .title-404 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 288px;
+    }
+
+    .text-not-found {
+        margin-top: 49px;
+        margin-bottom: 0px;
+        font-size: xx-large;
+    }
+
+    .link-not-found {
+        margin-top: 109px;
+        margin-bottom: 109px;
+        text-decoration: none;
+        color: $kasa-orange;
+    }
+
+    .link-not-found:hover {
+        text-decoration: underline;
+    }
+}
