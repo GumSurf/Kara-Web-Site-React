@@ -1,4 +1,3 @@
-// About.js
 function About() {
     return (<div>
         <div className="background-mountain"></div>
