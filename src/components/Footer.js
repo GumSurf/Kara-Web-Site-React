@@ -1,10 +1,10 @@
-import LOGO from '../assets/LOGO.png'
+import LOGO from '../assets/LogoBlackAndWhite.png'
 
 function Footer() {
     return (
-        <div>
+        <div className='kasa-footer'>
             <img src={LOGO} alt="Logo page web" />
-            <h2>© 2020 Kasa. All rights reserved</h2>
+            <h2 className='kasa-copyright'>© 2020 Kasa. All rights reserved</h2>
         </div>
     )
 }
