@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import data from '../datas/LogementList.json';
 
 function ApartmentDetails() {

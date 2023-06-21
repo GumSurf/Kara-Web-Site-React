@@ -6,6 +6,7 @@ import Body from './Body';
 import About from './About';
 import NotFound from './NotFound';
 import ApartmentDetails from './ApartmentDetails';
+import '../css/style.css'
 
 function App() {
   return (
