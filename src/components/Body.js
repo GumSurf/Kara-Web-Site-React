@@ -9,12 +9,15 @@ function Body() {
                 <h1 className='title-sea'>Chez vous, partout et ailleurs</h1>
                 <div className='overlay-sea'></div>
             </div>
-            <div>
+            <div className='kasa-gallery'>
                 {data.map((item) => (
-                    <div key={item.id}>
-                        <h2><Link to={`/details_appartement/${item.id}`}>{item.title}</Link></h2>
-                        <img src={item.cover} alt={item.title} />
-                    </div>
+                    <a className='div-appartement' href={`/details_appartement/${item.id}`} key={item.id}>
+                        <h2 className='titre-appartment'>{item.title}</h2>
+                        <div className='div-img'>
+                            <img className='img-gallery' src={item.cover} alt={item.title} />
+                            <div className='img-overlay'></div>
+                        </div>
+                    </a>
                 ))}
             </div>
         </div>
