@@ -1,0 +1,198 @@
+.div-apartment {
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .div-img-apartment {
+        width: 100%; // La div occupe 50% de la largeur de son conteneur
+        height: 0;
+        padding-bottom: 33.468%; // Crée une hauteur relative en fonction de la largeur
+        position: relative; // Nécessaire pour positionner l'image à l'intérieur de la div
+        overflow: hidden; // Masque le contenu débordant
+        margin-bottom: 30px;
+        border-radius: 25px;
+
+        .img-apartment {
+            //W: 1240; H: 415;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .title-host-info {
+        display: flex;
+        justify-content: space-between;
+
+        .div-title-location {
+            display: flex;
+            flex-direction: column;
+
+            .titre-apartment {
+                margin-block-start: 0;
+                margin-block-end: 0;
+                padding-bottom: 4px;
+            }
+
+            .location-apartment {
+                margin-block-start: 0;
+            }
+        }
+
+        .host-info {
+            display: flex;
+            justify-content: flex-end;
+
+            .div-names {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                margin-bottom: 23px;
+
+                .host-names {
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                    padding-right: 10px;
+
+                    // Styles pour le nom de l'hôte de l'appartement
+                }
+            }
+
+            .div-img-host {
+                width: 27.9%; // La div occupe 50% de la largeur de son conteneur
+                height: 74.62%;
+                overflow: hidden; // Masque le contenu débordant
+                border-radius: 64px;
+
+                .host-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .div-tags-ratings {
+        display: flex;
+        justify-content: space-between;
+
+        .div-tags { //Ici à Réparer les tags qui s'affichent pas totalement 
+            display: flex;
+
+            .div-around-tags {
+                //115 25
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: 39.08%;
+                border-radius: 10px;
+                padding: 4.5px 25.274px 7.5px 25.274px;
+                margin-right: 10px;
+                background-color: $kasa-orange;
+
+                .tag-apartment {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    color: white;
+                    font-size: x-small;
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                }
+            }
+        }
+
+        .rating {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+
+            .star { //36
+                position: relative;
+                width: 4.233%;
+                height: 54.56%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .filled {
+                background-image: url('../assets/star-orange.png'); // Chemin vers l'image pour les étoiles remplies
+            }
+
+            .empty {
+                background-image: url('../assets/star-gray.png'); // Chemin vers l'image pour les étoiles vides
+            }
+        }
+    }
+
+    .div-details-apartment {
+        display: flex;
+        justify-content: space-between;
+
+        .details-apartment {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background-color: $kasa-orange;
+
+            &[open] {
+                color: $kasa-orange;
+                background: var(--gray, #F6F6F6);
+
+                summary {
+                    border-radius: 10px;
+                    background-color: $kasa-orange;
+                }
+            }
+
+            .description-apartment {
+                padding: 20px;
+                margin: 0;
+            }
+
+            .ul-equipment {
+                list-style-type: none;
+                padding: 20px;
+                margin: 0;
+            }
+
+            summary {
+                position: relative;
+                padding-right: 20px;
+                padding-bottom: 4px;
+                padding-top: 4px;
+                list-style-type: none;
+                padding-left: 10px;
+                color: white;
+            }
+
+            summary::before {
+                content: '';
+                display: inline-block;
+                width: 5.246%;
+                height: 100%;
+                background-image: url('../assets/arrow-down.png');
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                margin-right: 5px;
+            }
+        }
+
+        .details-description {
+            margin-right: 10px;
+        }
+
+        .details-equipment {
+            margin-left: 10px;
+        }
+    }
+}
