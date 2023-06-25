@@ -20,6 +20,18 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .div-links {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            margin-right: 20px;
+            margin-left: 20px;
+        }
     }
 
     .title-host-info {
@@ -31,12 +43,14 @@
             flex-direction: column;
 
             .titre-apartment {
+                color: $kasa-orange;
                 margin-block-start: 0;
                 margin-block-end: 0;
                 padding-bottom: 4px;
             }
 
             .location-apartment {
+                color: $kasa-orange;
                 margin-block-start: 0;
             }
         }
@@ -46,30 +60,28 @@
             justify-content: flex-end;
 
             .div-names {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-end;
-                margin-bottom: 23px;
+                margin-top: 9px;
 
                 .host-names {
+                    display: flex;
+                    justify-content: flex-end;
                     margin-block-start: 0;
                     margin-block-end: 0;
                     padding-right: 10px;
-
-                    // Styles pour le nom de l'hôte de l'appartement
+                    color: $kasa-orange;
                 }
             }
 
             .div-img-host {
-                width: 27.9%; // La div occupe 50% de la largeur de son conteneur
-                height: 74.62%;
-                overflow: hidden; // Masque le contenu débordant
-                border-radius: 64px;
+                width: 64px;
+                height: 64px;
+                overflow: hidden;
+                border-radius: 50%;
 
                 .host-img {
                     width: 100%;
-                    height: 100%;
+                    height: auto;
+                    display: block;
                     object-fit: cover;
                 }
             }
@@ -79,25 +91,28 @@
     .div-tags-ratings {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
 
-        .div-tags { //Ici à Réparer les tags qui s'affichent pas totalement 
+        .div-tags {
             display: flex;
+            flex-direction: row;
+            white-space: nowrap;
 
             .div-around-tags {
-                //115 25
                 display: flex;
                 align-items: center;
                 position: relative;
                 width: 100%;
                 height: 39.08%;
                 border-radius: 10px;
-                padding: 4.5px 25.274px 7.5px 25.274px;
+                padding: 4.5px 25px 7.5px 25px;
                 margin-right: 10px;
                 background-color: $kasa-orange;
 
                 .tag-apartment {
                     display: flex;
-                    align-items: center;
+                    justify-content: center;
                     width: 100%;
                     color: white;
                     font-size: x-small;
@@ -110,9 +125,11 @@
         .rating {
             display: flex;
             justify-content: flex-end;
+            align-items: flex-start;
             width: 100%;
+            height: 44px;
 
-            .star { //36
+            .star {
                 position: relative;
                 width: 4.233%;
                 height: 54.56%;
@@ -121,11 +138,11 @@
             }
 
             .filled {
-                background-image: url('../assets/star-orange.png'); // Chemin vers l'image pour les étoiles remplies
+                background-image: url('../assets/star-orange.png');
             }
 
             .empty {
-                background-image: url('../assets/star-gray.png'); // Chemin vers l'image pour les étoiles vides
+                background-image: url('../assets/star-gray.png');
             }
         }
     }
@@ -151,6 +168,11 @@
                 }
             }
 
+            &[open] summary::before {
+                background-image: url('../assets/arrow-down.svg');
+                transform: translateX(-10%) translateY(-45%);
+            }
+
             .description-apartment {
                 padding: 20px;
                 margin: 0;
@@ -168,31 +190,31 @@
                 padding-bottom: 4px;
                 padding-top: 4px;
                 list-style-type: none;
-                padding-left: 10px;
                 color: white;
+                padding: 10px 0px 10px 10px;
             }
 
             summary::before {
                 content: '';
                 display: inline-block;
-                width: 5.246%;
-                height: 100%;
-                background-image: url('../assets/arrow-down.png');
+                width: 32px;
+                height: 32px;
+                background-image: url('../assets/arrow-up.svg');
                 background-size: cover;
                 position: absolute;
                 top: 50%;
                 right: 0;
-                transform: translateY(-50%);
-                margin-right: 5px;
-            }
+                transform: translateX(-10%) translateY(-55%);
+                margin-right: 10px;
+              }
         }
 
         .details-description {
-            margin-right: 10px;
+            margin-right: 37.5px;
         }
 
         .details-equipment {
-            margin-left: 10px;
+            margin-left: 37.5px;
         }
     }
 }
