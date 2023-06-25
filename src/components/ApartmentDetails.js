@@ -80,12 +80,12 @@ function ApartmentDetails() {
                 <RatingStars rating={apartment.rating} />
             </div>
             <div className='div-details-apartment'>
-            <details>
+            <details className='details-apartment details-description'>
                 <summary className='summary-animation'>Description</summary>
                 <p className='description-apartment'>{apartment.description}</p>
             </details>
 
-            <details>
+            <details className='details-apartment details-equipment'>
                 <summary className='summary-animation'>Equipment</summary>
                 <ul className='ul-equipment'>
                     {apartment.equipments.map((equipment, index) => (
