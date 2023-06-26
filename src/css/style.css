@@ -76,6 +76,32 @@
       transform: scale(1.05);
       color: #FF6060; }
 
+@media only screen and (max-width: 767px) {
+  .kasa-body {
+    margin: 0px 20px 30px 20px; }
+    .kasa-body .background-sea {
+      border-radius: 10px;
+      width: auto;
+      height: 111px;
+      border-radius: 10px; }
+      .kasa-body .background-sea .title-sea {
+        width: 190px;
+        padding: 30px 0px 30px 15px;
+        text-align: start;
+        font-size: 24px; }
+      .kasa-body .background-sea .overlay-sea {
+        border-radius: 10px; }
+    .kasa-body .kasa-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: white;
+      border-radius: 25px; }
+      .kasa-body .kasa-gallery .div-appartement {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0px; }
+        .kasa-body .kasa-gallery .div-appartement .div-img {
+          padding-top: 76.12%; } }
 .kasa-not-found {
   display: flex;
   flex-direction: column;
@@ -88,7 +114,9 @@
   .kasa-not-found .text-not-found {
     margin-top: 49px;
     margin-bottom: 0px;
-    font-size: xx-large; }
+    font-size: xx-large;
+    font-weight: normal;
+    text-align: center; }
   .kasa-not-found .link-not-found {
     margin-top: 109px;
     margin-bottom: 109px;
@@ -97,6 +125,19 @@
   .kasa-not-found .link-not-found:hover {
     text-decoration: underline; }
 
+@media only screen and (max-width: 767px) {
+  .kasa-not-found .title-404 {
+    margin-top: 83px;
+    font-size: 96px; }
+  .kasa-not-found .text-not-found {
+    margin-top: 93px;
+    font-size: medium; }
+    .kasa-not-found .text-not-found .break-word::before {
+      content: "\A";
+      white-space: pre; }
+  .kasa-not-found .link-not-found {
+    margin-top: 113px;
+    margin-bottom: 83px; } }
 .div-apartment {
   padding-left: 100px;
   padding-right: 100px; }
@@ -255,13 +296,25 @@
       margin-left: 37.5px; }
 
 .kasa-about {
-  margin: 20px 100px 20px 100px; }
-  .kasa-about .background-mountain {
-    width: 100%;
-    height: 223px;
-    background-image: url("../assets/ImgBackgroundMountain.png");
-    object-fit: cover;
+  padding: 20px 100px 20px 100px; }
+  .kasa-about .div-mountain {
+    position: relative;
     border-radius: 25px; }
+    .kasa-about .div-mountain .background-mountain {
+      width: 100%;
+      height: 223px;
+      background-image: url("../assets/ImgBackgroundMountain.png");
+      object-fit: cover;
+      border-radius: 25px; }
+    .kasa-about .div-mountain .overlay-mountain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 25px;
+      z-index: 1; }
   .kasa-about details {
     position: relative;
     width: 100%;
@@ -306,14 +359,24 @@
   .kasa-about .text-securite {
     padding: 15px 20px 20px 20px; }
 
+@media only screen and (max-width: 767px) {
+  .kasa-about {
+    margin-top: 0px;
+    padding: 20px 20px 0px 20px; }
+    .kasa-about .div-mountain .background-mountain {
+      border-radius: 10px; }
+    .kasa-about .div-mountain .overlay-mountain {
+      height: 98%;
+      border-radius: 10px; } }
 .kasa-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 45px 100px 50px 100px; }
+  padding: 45px 100px 50px 100px; }
   .kasa-header .header-links {
     display: flex;
-    list-style-type: none; }
+    list-style-type: none;
+    margin: 0; }
     .kasa-header .header-links .header-link-accueil {
       margin-right: 57px;
       text-decoration: none;
@@ -326,6 +389,17 @@
     .kasa-header .header-links .header-link-a-propos:hover {
       text-decoration: underline; }
 
+@media only screen and (max-width: 767px) {
+  .kasa-header {
+    padding: 20px 20px 0px 20px; }
+    .kasa-header .link-logo {
+      max-width: 40%; }
+      .kasa-header .link-logo .header-logo {
+        width: 100%; }
+    .kasa-header .header-links {
+      padding: 0; }
+      .kasa-header .header-links .header-link-accueil {
+        margin-right: 10px; } }
 .kasa-footer {
   margin-top: 50px;
   padding-top: 66px;
@@ -336,6 +410,15 @@
   .kasa-footer .kasa-copyright {
     margin-top: 29px;
     font-weight: normal;
-    font-size: large; }
+    font-size: large;
+    margin-bottom: 0; }
+
+@media only screen and (max-width: 767px) {
+  .kasa-footer {
+    margin-top: 30px;
+    padding: 60px 120px 60px 120px; }
+    .kasa-footer .kasa-copyright {
+      margin-top: auto;
+      font-size: x-small; } }
 
 /*# sourceMappingURL=style.css.map */
