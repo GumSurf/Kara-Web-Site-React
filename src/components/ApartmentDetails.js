@@ -40,6 +40,8 @@ function ApartmentDetails() {
 
     const previousApartmentLink = `/details_appartement/${previousApartment.id}`;
 
+    const isMobile = window.innerWidth <= 767;
+
     return (
         <div className='div-apartment'>
             <div className='div-img-apartment'>
@@ -53,49 +55,89 @@ function ApartmentDetails() {
                     </Link>
                 </div>
             </div>
-            <div className='title-host-info'>
-                <div className='div-title-location'>
-                    <h1 className='titre-apartment'>{apartment.title}</h1>
-                    <p className='location-apartment'>{apartment.location}</p>
-                </div>
-                <div className='host-info'>
-                    <div className='div-names'>
-                        <p className='host-names'>{firstName}</p>
-                        <p className='host-names'>{lastName}</p>
-                    </div>
-                    <div className='div-img-host'>
-                        <img className='host-img' src={apartment.host.picture} alt={apartment.host.name} />
-                    </div>
-                </div>
-            </div>
-
-            <div className='div-tags-ratings'>
-                <div className='div-tags'>
-                    {apartment.tags.map((tag, index) => (
-                        <div className='div-around-tags'>
-                            <p className='tag-apartment' key={index}>{tag}</p>
+            {!isMobile && (
+                <>
+                    <div className='title-host-info'>
+                        <div className='div-title-location'>
+                            <h1 className='titre-apartment'>{apartment.title}</h1>
+                            <p className='location-apartment'>{apartment.location}</p>
                         </div>
-                    ))}
-                </div>
-                <RatingStars rating={apartment.rating} />
-            </div>
-            <div className='div-details-apartment'>
-            <details className='details-apartment details-description'>
-                <summary className='summary-animation'>Description</summary>
-                <p className='description-apartment'>{apartment.description}</p>
-            </details>
+                        <div className='host-info'>
+                            <div className='div-names'>
+                                <p className='host-names'>{firstName}</p>
+                                <p className='host-names'>{lastName}</p>
+                            </div>
+                            <div className='div-img-host'>
+                                <img className='host-img' src={apartment.host.picture} alt={apartment.host.name} />
+                            </div>
+                        </div>
+                    </div>
 
-            <details className='details-apartment details-equipment'>
-                <summary className='summary-animation'>Equipment</summary>
-                <ul className='ul-equipment'>
-                    {apartment.equipments.map((equipment, index) => (
-                        <li className='equipment-apartment' key={index}>
-                            {equipment}
-                        </li>
-                    ))}
-                </ul>
-            </details>
-        </div>
+
+                    <div className='div-tags-ratings'>
+                        <div className='div-tags'>
+                            {apartment.tags.map((tag, index) => (
+                                <div className='div-around-tags'>
+                                    <p className='tag-apartment' key={index}>{tag}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <RatingStars rating={apartment.rating} />
+                    </div>
+                </>
+            )}
+
+            {isMobile && (
+                <>
+                    <div className='title-host-info'>
+                        <div className='div-title-location'>
+                            <h1 className='titre-apartment'>{apartment.title}</h1>
+                            <p className='location-apartment'>{apartment.location}</p>
+                        </div>
+                    </div>
+                    <div className='div-tags-ratings'>
+                        <div className='div-tags'>
+                            {apartment.tags.map((tag, index) => (
+                                <div className='div-around-tags'>
+                                    <p className='tag-apartment' key={index}>{tag}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className='title-host-info'>
+                        <div className='host-info'>
+                            <RatingStars rating={apartment.rating} />
+                            <div className='div-names-img-host'>
+                                <div className='div-names'>
+                                    <p className='host-names'>{firstName}</p>
+                                    <p className='host-names'>{lastName}</p>
+                                </div>
+                                <div className='div-img-host'>
+                                    <img className='host-img' src={apartment.host.picture} alt={apartment.host.name} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )}
+
+            <div className='div-details-apartment'>
+                <details className='details-apartment details-description'>
+                    <summary className='summary-animation'>Description</summary>
+                    <p className='description-apartment'>{apartment.description}</p>
+                </details>
+
+                <details className='details-apartment details-equipment'>
+                    <summary className='summary-animation'>Equipment</summary>
+                    <ul className='ul-equipment'>
+                        {apartment.equipments.map((equipment, index) => (
+                            <li className='equipment-apartment' key={index}>
+                                {equipment}
+                            </li>
+                        ))}
+                    </ul>
+                </details>
+            </div>
         </div>
     );
 }
