@@ -14,6 +14,8 @@
         margin-top: 49px;
         margin-bottom: 0px;
         font-size: xx-large;
+        font-weight: normal;
+        text-align: center;
     }
 
     .link-not-found {
@@ -25,5 +27,30 @@
 
     .link-not-found:hover {
         text-decoration: underline;
+    }
+}
+
+@include responsive(phone) {
+    .kasa-not-found {
+
+        .title-404 {
+            margin-top: 83px;
+            font-size: 96px;
+        }
+
+        .text-not-found {
+            margin-top: 93px;
+            font-size: medium;
+
+            .break-word::before {
+                content: "\A";
+                white-space: pre;
+            }
+        }
+
+        .link-not-found {
+            margin-top: 113px;
+            margin-bottom: 83px;
+        }
     }
 }
