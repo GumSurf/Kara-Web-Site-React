@@ -91,10 +91,46 @@
         .div-appartement:hover {
             transform: scale(1.15);
         }
-        
+
         .div-appartement:hover .titre-appartment {
             transform: scale(1.05);
             color: $kasa-orange;
+        }
+    }
+}
+
+@include responsive(phone) {
+    .kasa-body {
+        margin: 0px 20px 30px 20px;
+
+        .background-sea {
+            border-radius: 10px;
+            width: auto;
+            height: 111px;
+
+            .title-sea {
+                width: 190px;
+                padding: 30px 0px 30px 15px;
+                text-align: start;
+                font-size: 24px;
+            }
+        }
+
+        .kasa-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: 25px;
+
+            .div-appartement {
+                width: 100%;
+                margin-top: 20px;
+                margin-left: 0px;
+
+                .div-img {
+                    padding-top: 76.12%;
+                }
+            }
         }
     }
 }
