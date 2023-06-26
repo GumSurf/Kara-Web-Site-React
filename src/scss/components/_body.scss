@@ -107,12 +107,17 @@
             border-radius: 10px;
             width: auto;
             height: 111px;
+            border-radius: 10px;
 
             .title-sea {
                 width: 190px;
                 padding: 30px 0px 30px 15px;
                 text-align: start;
                 font-size: 24px;
+            }
+
+            .overlay-sea {
+                border-radius: 10px;
             }
         }
 
