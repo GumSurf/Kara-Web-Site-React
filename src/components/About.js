@@ -3,7 +3,10 @@ import ImgMountain from '../assets/ImgBackgroundMountain.png'
 function About() {
     return (
         <div className="kasa-about">
-            <img className="background-mountain" src={ImgMountain} alt="Mountain Background" />
+            <div className='div-mountain'>
+                <img className="background-mountain" src={ImgMountain} alt="Mountain Background" />
+                <div className='overlay-mountain'></div>
+            </div>
             <details className="div-fiabilite">
                 <summary>Fiabilité</summary>
                 <div className="text-fiabilite">
