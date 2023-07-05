@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import data from '../datas/LogementList.json';
 import RatingStars from './RatingStars';
 import ArrowLeft from '../assets/ArrowLeft.png'
@@ -10,6 +11,8 @@ function ApartmentDetails() {
     const { id } = params;
     const apartment = data.find((item) => item.id === id);
 
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+    
     if (!apartment) {
         return <div>Appartement non trouvé</div>;
     }
@@ -38,14 +41,19 @@ function ApartmentDetails() {
         previousApartment = data[data.length - 1];
     }
 
+    var counter = currentIndex + 1;
+
     const previousApartmentLink = `/details_appartement/${previousApartment.id}`;
 
-    const isMobile = window.innerWidth <= 767;
+    
 
     return (
         <div className='div-apartment'>
             <div className='div-img-apartment'>
                 <img className='img-apartment' src={apartment.cover} alt={apartment.title} />
+                <div className='div-counter'>
+                    <p className='counter'>{counter}/{data.length}</p>
+                </div>
                 <div className='div-links'>
                     <Link className='link' to={previousApartmentLink}>
                         <img src={ArrowLeft} alt="Lien précédent" className="link-image" />
@@ -55,7 +63,8 @@ function ApartmentDetails() {
                     </Link>
                 </div>
             </div>
-            {!isMobile && (
+
+            {!isMobile ? (
                 <>
                     <div className='title-host-info'>
                         <div className='div-title-location'>
@@ -85,9 +94,7 @@ function ApartmentDetails() {
                         <RatingStars rating={apartment.rating} />
                     </div>
                 </>
-            )}
-
-            {isMobile && (
+            ) : (
                 <>
                     <div className='title-host-info'>
                         <div className='div-title-location'>
