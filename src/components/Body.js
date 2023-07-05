@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import data from '../datas/LogementList.json';
 
 function Body() {
