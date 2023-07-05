@@ -20,6 +20,15 @@
             object-fit: cover;
         }
 
+        .div-counter {
+            .counter {
+                position: absolute;
+                left: 50%;
+                top: 85%;
+                color: white;
+            }
+        }
+
         .div-links {
             position: absolute;
             top: 50%;
@@ -227,9 +236,12 @@
 
 
         .div-img-apartment {
-            width: 335px;
             height: 225px;
             border-radius: 10px;
+
+            .div-counter {
+                display: none;
+            }
 
             .div-links {
                 .link {
@@ -285,7 +297,7 @@
                 .div-names-img-host {
                     display: flex;
                     justify-content: flex-end;
-                    width: 73%;
+                    width: 100%;
 
                     .div-names {
                         position: relative;
