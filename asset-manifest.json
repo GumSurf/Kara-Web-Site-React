@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Portfolio-Nina-Carducci/static/css/main.b2bed91e.css",
-    "main.js": "/Portfolio-Nina-Carducci/static/js/main.8607dfbc.js",
-    "static/js/787.0ce615c0.chunk.js": "/Portfolio-Nina-Carducci/static/js/787.0ce615c0.chunk.js",
-    "static/media/ImgBackgroundMountain.png": "/Portfolio-Nina-Carducci/static/media/ImgBackgroundMountain.418a52c74934e83f3682.png",
-    "static/media/ImgBackgroundSea.png": "/Portfolio-Nina-Carducci/static/media/ImgBackgroundSea.7417bf958a9238703b47.png",
-    "index.html": "/Portfolio-Nina-Carducci/index.html",
-    "static/media/arrow-down.svg": "/Portfolio-Nina-Carducci/static/media/arrow-down.9a5e3449a3b1f9e0f72a.svg",
-    "static/media/arrow-up.svg": "/Portfolio-Nina-Carducci/static/media/arrow-up.0e51f511d60762d4eccb.svg",
-    "main.b2bed91e.css.map": "/Portfolio-Nina-Carducci/static/css/main.b2bed91e.css.map",
-    "main.8607dfbc.js.map": "/Portfolio-Nina-Carducci/static/js/main.8607dfbc.js.map",
-    "787.0ce615c0.chunk.js.map": "/Portfolio-Nina-Carducci/static/js/787.0ce615c0.chunk.js.map"
+    "main.css": "/Kara-Web-Site-React/static/css/main.0b09e628.css",
+    "main.js": "/Kara-Web-Site-React/static/js/main.9d54ce33.js",
+    "static/js/787.0ce615c0.chunk.js": "/Kara-Web-Site-React/static/js/787.0ce615c0.chunk.js",
+    "static/media/ImgBackgroundMountain.png": "/Kara-Web-Site-React/static/media/ImgBackgroundMountain.418a52c74934e83f3682.png",
+    "static/media/ImgBackgroundSea.png": "/Kara-Web-Site-React/static/media/ImgBackgroundSea.7417bf958a9238703b47.png",
+    "index.html": "/Kara-Web-Site-React/index.html",
+    "static/media/arrow-down.svg": "/Kara-Web-Site-React/static/media/arrow-down.9a5e3449a3b1f9e0f72a.svg",
+    "static/media/arrow-up.svg": "/Kara-Web-Site-React/static/media/arrow-up.0e51f511d60762d4eccb.svg",
+    "main.0b09e628.css.map": "/Kara-Web-Site-React/static/css/main.0b09e628.css.map",
+    "main.9d54ce33.js.map": "/Kara-Web-Site-React/static/js/main.9d54ce33.js.map",
+    "787.0ce615c0.chunk.js.map": "/Kara-Web-Site-React/static/js/787.0ce615c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2bed91e.css",
-    "static/js/main.8607dfbc.js"
+    "static/css/main.0b09e628.css",
+    "static/js/main.9d54ce33.js"
   ]
 }
