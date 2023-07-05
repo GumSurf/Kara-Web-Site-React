@@ -14,7 +14,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Body />} />
+        <Route path="/Kara-Web-Site-React" element={<Body />} />
         <Route path="/about" element={<About />} />
         <Route path="/details_appartement/:id" element={<ApartmentDetails />} />
         <Route path='*' element={<NotFound />}/>
