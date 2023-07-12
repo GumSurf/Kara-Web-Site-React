@@ -11,6 +11,7 @@ function ApartmentDetails() {
     const params = useParams();
     const { id } = params;
     const apartment = data.find((item) => item.id === id);
+    const nbrOfApartments = data.length;
 
     const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
     
@@ -52,9 +53,12 @@ function ApartmentDetails() {
         <div className='div-apartment'>
             <div className='div-img-apartment'>
                 <img className='img-apartment' src={apartment.cover} alt={apartment.title} />
-                <div className='div-counter'>
-                    <p className='counter'>{counter}/{data.length}</p>
-                </div>
+                {nbrOfApartments != 1 && (
+                    <div className='div-counter'>
+                        <p className='counter'>{counter}/{data.length}</p>
+                    </div>
+                )}
+
                 <div className='div-links'>
                     <Link className='link' to={previousApartmentLink}>
                         <img src={ArrowLeft} alt="Lien précédent" className="link-image" />
