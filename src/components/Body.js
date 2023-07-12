@@ -11,7 +11,7 @@ function Body() {
             </div>
             <div className='kasa-gallery'>
                 {data.map((item) => (
-                    <Link className='div-appartement' to={`/details_appartement/${item.id}`} key={item.id}>
+                    <Link className='div-appartement' to={`/Kasa-Web-Site-React/details_appartement/${item.id}`} key={item.id}>
                         <h2 className='titre-appartment'>{item.title}</h2>
                         <div className='div-img'>
                             <img className='img-gallery' src={item.cover} alt={item.title} />

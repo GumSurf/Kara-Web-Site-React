@@ -32,7 +32,7 @@ function ApartmentDetails() {
         nextApartment = data[0];
     }
 
-    const nextApartmentLink = `/details_appartement/${nextApartment.id}`;
+    const nextApartmentLink = `/Kasa-Web-Site-React/details_appartement/${nextApartment.id}`;
 
     //Previous Apartment
     let previousApartment;
@@ -44,7 +44,7 @@ function ApartmentDetails() {
 
     var counter = currentIndex + 1;
 
-    const previousApartmentLink = `/details_appartement/${previousApartment.id}`;
+    const previousApartmentLink = `/Kasa-Web-Site-React/details_appartement/${previousApartment.id}`;
 
     
 
