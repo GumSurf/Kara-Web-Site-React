@@ -14,10 +14,10 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/Kara-Web-Site-React" element={<Body />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/details_appartement/:id" element={<ApartmentDetails />} />
-        <Route path='*' element={<NotFound />}/>
+        <Route path="/Kasa-Web-Site-React" element={<Body />} />
+        <Route path="/Kasa-Web-Site-React/about" element={<About />} />
+        <Route path="/Kasa-Web-Site-React/details_appartement/:id" element={<ApartmentDetails />} />
+        <Route path='Kasa-Web-Site-React/*' element={<NotFound />}/>
       </Routes>
 
       <Footer />
