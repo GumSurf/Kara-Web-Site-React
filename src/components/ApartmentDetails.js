@@ -5,6 +5,7 @@ import data from '../datas/LogementList.json';
 import RatingStars from './RatingStars';
 import ArrowLeft from '../assets/ArrowLeft.png'
 import ArrowRight from '../assets/ArrowRight.png'
+import NotFound from './NotFound';
 
 function ApartmentDetails() {
     const params = useParams();
@@ -14,7 +15,7 @@ function ApartmentDetails() {
     const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
     
     if (!apartment) {
-        return <div>Appartement non trouvé</div>;
+        return <NotFound />;
     }
 
     const nameParts = apartment.host.name.split(' ');
