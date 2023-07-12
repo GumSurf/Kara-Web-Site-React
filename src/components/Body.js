@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../datas/LogementList.json';
+import { Link } from 'react-router-dom';
 
 function Body() {
     return (
@@ -10,13 +11,13 @@ function Body() {
             </div>
             <div className='kasa-gallery'>
                 {data.map((item) => (
-                    <a className='div-appartement' href={`/details_appartement/${item.id}`} key={item.id}>
+                    <Link className='div-appartement' to={`/details_appartement/${item.id}`} key={item.id}>
                         <h2 className='titre-appartment'>{item.title}</h2>
                         <div className='div-img'>
                             <img className='img-gallery' src={item.cover} alt={item.title} />
                             <div className='img-overlay'></div>
                         </div>
-                    </a>
+                    </Link>
                 ))}
             </div>
         </div>
