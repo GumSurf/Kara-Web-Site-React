@@ -14,7 +14,7 @@ function ApartmentDetails() {
     const nbrOfApartments = data.length;
 
     const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-    
+
     if (!apartment) {
         return <NotFound />;
     }
@@ -47,26 +47,27 @@ function ApartmentDetails() {
 
     const previousApartmentLink = `/Kasa-Web-Site-React/details_appartement/${previousApartment.id}`;
 
-    
+
 
     return (
         <div className='div-apartment'>
             <div className='div-img-apartment'>
                 <img className='img-apartment' src={apartment.cover} alt={apartment.title} />
-                {nbrOfApartments != 1 && (
-                    <div className='div-counter'>
-                        <p className='counter'>{counter}/{data.length}</p>
+                {nbrOfApartments !== 1 && (
+                    <div>
+                        <div className='div-counter'>
+                            <p className='counter'>{counter}/{data.length}</p>
+                        </div>
+                        <div className='div-links'>
+                            <Link className='link' to={previousApartmentLink}>
+                                <img src={ArrowLeft} alt="Lien précédent" className="link-image" />
+                            </Link>
+                            <Link className='link' to={nextApartmentLink}>
+                                <img src={ArrowRight} alt="Lien suivant" className="link-image" />
+                            </Link>
+                        </div>
                     </div>
                 )}
-
-                <div className='div-links'>
-                    <Link className='link' to={previousApartmentLink}>
-                        <img src={ArrowLeft} alt="Lien précédent" className="link-image" />
-                    </Link>
-                    <Link className='link' to={nextApartmentLink}>
-                        <img src={ArrowRight} alt="Lien suivant" className="link-image" />
-                    </Link>
-                </div>
             </div>
 
             {!isMobile ? (
