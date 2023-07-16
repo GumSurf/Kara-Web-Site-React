@@ -480,5 +480,7 @@
     .kasa-footer .kasa-copyright {
       margin-top: auto;
       font-size: x-small; } }
+body {
+  font-family: 'Montserrat', sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
