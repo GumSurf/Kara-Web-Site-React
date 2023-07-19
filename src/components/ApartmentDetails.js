@@ -41,7 +41,7 @@ function ApartmentDetails() {
         <div className='div-apartment'>
             <div className='div-img-apartment'>
                 <img className='img-apartment' src={apartment.pictures[currentImageIndex]} alt={apartment.title} />
-                {nbrOfApartments !== 1 && (
+                {apartment.pictures.length !== 1 && (
                     <div>
                         <div className='div-counter'>
                             <p className='counter'>{currentImageIndex + 1}/{apartment.pictures.length}</p>
