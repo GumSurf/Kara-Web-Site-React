@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Kasa-Web-Site-React/static/css/main.8a4b240a.css",
-    "main.js": "/Kasa-Web-Site-React/static/js/main.8c68603f.js",
+    "main.js": "/Kasa-Web-Site-React/static/js/main.0eda6885.js",
     "static/js/787.0ce615c0.chunk.js": "/Kasa-Web-Site-React/static/js/787.0ce615c0.chunk.js",
     "static/media/ImgBackgroundMountain.png": "/Kasa-Web-Site-React/static/media/ImgBackgroundMountain.418a52c74934e83f3682.png",
     "static/media/ImgBackgroundSea.png": "/Kasa-Web-Site-React/static/media/ImgBackgroundSea.7417bf958a9238703b47.png",
@@ -9,11 +9,11 @@
     "static/media/arrow-down.svg": "/Kasa-Web-Site-React/static/media/arrow-down.9a5e3449a3b1f9e0f72a.svg",
     "static/media/arrow-up.svg": "/Kasa-Web-Site-React/static/media/arrow-up.0e51f511d60762d4eccb.svg",
     "main.8a4b240a.css.map": "/Kasa-Web-Site-React/static/css/main.8a4b240a.css.map",
-    "main.8c68603f.js.map": "/Kasa-Web-Site-React/static/js/main.8c68603f.js.map",
+    "main.0eda6885.js.map": "/Kasa-Web-Site-React/static/js/main.0eda6885.js.map",
     "787.0ce615c0.chunk.js.map": "/Kasa-Web-Site-React/static/js/787.0ce615c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8a4b240a.css",
-    "static/js/main.8c68603f.js"
+    "static/js/main.0eda6885.js"
   ]
 }
