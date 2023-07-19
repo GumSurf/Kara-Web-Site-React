@@ -18,7 +18,7 @@ function App() {
         <Route path="/Kasa-Web-Site-React/about" element={<About />} />
         <Route path="/Kasa-Web-Site-React/details_appartement/:id" element={<ApartmentDetails />} />
         <Route path="/Kasa-Web-Site-React/*" element={<NotFound />}/>
-        <Route path="*" element={<NotFound />}/>
+        <Route path="/*" element={<NotFound />}/>
       </Routes>
 
       <Footer />
