@@ -1,11 +1,13 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import data from '../datas/LogementList.json';
 import RatingStars from './RatingStars';
 import ArrowLeft from '../assets/ArrowLeft.png'
 import ArrowRight from '../assets/ArrowRight.png'
 import NotFound from './NotFound';
+import DivCollapse from './DivCollapse';
 
 function ApartmentDetails() {
     const params = useParams();
@@ -15,6 +17,8 @@ function ApartmentDetails() {
 
     const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
     if (!apartment) {
         return <NotFound />;
     }
@@ -23,48 +27,32 @@ function ApartmentDetails() {
     const firstName = nameParts[0];
     const lastName = nameParts.slice(1).join(' ');
 
-    //Next Apartment
-    const currentIndex = data.findIndex((item) => item.id === id);
+    const nextImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % apartment.pictures.length);
+    };
 
-    let nextApartment;
-    if (currentIndex !== -1 && currentIndex < data.length - 1) {
-        nextApartment = data[currentIndex + 1];
-    } else {
-        nextApartment = data[0];
-    }
-
-    const nextApartmentLink = `/Kasa-Web-Site-React/details_appartement/${nextApartment.id}`;
-
-    //Previous Apartment
-    let previousApartment;
-    if (currentIndex !== -1 && currentIndex > 0) {
-        previousApartment = data[currentIndex - 1];
-    } else {
-        previousApartment = data[data.length - 1];
-    }
-
-    var counter = currentIndex + 1;
-
-    const previousApartmentLink = `/Kasa-Web-Site-React/details_appartement/${previousApartment.id}`;
-
-
+    const previousImage = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === 0 ? apartment.pictures.length - 1 : prevIndex - 1
+        );
+    };
 
     return (
         <div className='div-apartment'>
             <div className='div-img-apartment'>
-                <img className='img-apartment' src={apartment.cover} alt={apartment.title} />
+                <img className='img-apartment' src={apartment.pictures[currentImageIndex]} alt={apartment.title} />
                 {nbrOfApartments !== 1 && (
                     <div>
                         <div className='div-counter'>
-                            <p className='counter'>{counter}/{data.length}</p>
+                            <p className='counter'>{currentImageIndex + 1}/{apartment.pictures.length}</p>
                         </div>
                         <div className='div-links'>
-                            <Link className='link' to={previousApartmentLink}>
+                            <button className='link' onClick={previousImage}>
                                 <img src={ArrowLeft} alt="Lien précédent" className="link-image" />
-                            </Link>
-                            <Link className='link' to={nextApartmentLink}>
+                            </button>
+                            <button className='link' onClick={nextImage}>
                                 <img src={ArrowRight} alt="Lien suivant" className="link-image" />
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 )}
@@ -133,24 +121,7 @@ function ApartmentDetails() {
                     </div>
                 </>
             )}
-
-            <div className='div-details-apartment'>
-                <details className='details-apartment details-description'>
-                    <summary className='summary-animation'>Description</summary>
-                    <p className='description-apartment'>{apartment.description}</p>
-                </details>
-
-                <details className='details-apartment details-equipment'>
-                    <summary className='summary-animation'>Equipment</summary>
-                    <ul className='ul-equipment'>
-                        {apartment.equipments.map((equipment, index) => (
-                            <li className='equipment-apartment' key={index}>
-                                {equipment}
-                            </li>
-                        ))}
-                    </ul>
-                </details>
-            </div>
+            <DivCollapse />
         </div>
     );
 }
