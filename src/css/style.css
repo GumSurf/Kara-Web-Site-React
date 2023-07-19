@@ -155,6 +155,9 @@
   .kasa-not-found .link-not-found {
     margin-top: 113px;
     margin-bottom: 83px; } }
+@media screen and (min-height: 880px) {
+  .kasa-not-found {
+    min-height: 69.6vh; } }
 .div-apartment {
   padding-left: 100px;
   padding-right: 100px; }
@@ -381,6 +384,9 @@
         margin-bottom: 20px; }
       .div-apartment .div-details-apartment .details-equipment {
         margin-left: 0; } }
+@media screen and (min-height: 880px) {
+  .div-apartment {
+    min-height: 69.6vh; } }
 .kasa-about {
   padding: 20px 100px 20px 100px; }
   .kasa-about .div-mountain {
@@ -397,7 +403,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 99%;
+      height: 98%;
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: 25px;
       z-index: 1; }
@@ -454,6 +460,9 @@
     .kasa-about .div-mountain .overlay-mountain {
       height: 98%;
       border-radius: 10px; } }
+@media screen and (min-height: 880px) {
+  .kasa-about {
+    min-height: 69.6vh; } }
 .kasa-header {
   display: flex;
   justify-content: space-between;
