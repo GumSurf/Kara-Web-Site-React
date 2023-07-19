@@ -39,6 +39,15 @@
             transform: translateY(-50%);
             margin-right: 20px;
             margin-left: 20px;
+            
+            .link {
+                background: none;
+                border: none;
+                .link-image {
+                    width: auto;
+                    height: auto;
+                }
+            }
         }
     }
 
@@ -168,8 +177,9 @@
             background-color: $kasa-orange;
 
             &[open] {
+                height: 300px;
                 color: $kasa-orange;
-                background: var(--gray, #F6F6F6);
+                background: var(--gray, #F6F6F6); 
 
                 summary {
                     border-radius: 10px;
@@ -321,6 +331,10 @@
         .div-details-apartment {
             justify-content: initial;
             flex-direction: column;
+
+            .details-apartment[open] {
+                height: auto;
+            }
 
             .details-description {
                 margin-right: 0;
