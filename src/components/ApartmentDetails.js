@@ -80,8 +80,8 @@ function ApartmentDetails() {
                     <div className='div-tags-ratings'>
                         <div className='div-tags'>
                             {apartment.tags.map((tag, index) => (
-                                <div className='div-around-tags'>
-                                    <p className='tag-apartment' key={index}>{tag}</p>
+                                <div className='div-around-tags' key={index}>
+                                    <p className='tag-apartment'>{tag}</p>
                                 </div>
                             ))}
                         </div>
